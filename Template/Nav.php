@@ -19,7 +19,7 @@ NAV;
 			<nav role="navigation" class="sidenav">
 				<ul>
 					<li><a href="Index.php">Hem</a></li>
-					<li><a href="SkapaInlagg.php">Skapa inlägg</a></li>
+					<li><a href="SkapaInlagg.php">Nytt inlägg</a></li>
 					<li><a href="LoggaUt.php">Logga ut</a></li>
 				</ul>
 			</nav>
