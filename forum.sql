@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 04 mars 2020 kl 10:52
+-- Tid vid skapande: 17 mars 2020 kl 10:00
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 
@@ -47,6 +47,13 @@ CREATE TABLE `users` (
   `password` varchar(50) COLLATE utf8_swedish_ci NOT NULL,
   `status` tinyint(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+
+--
+-- Dumpning av Data i tabell `users`
+--
+
+INSERT INTO `users` (`anvnamn`, `email`, `password`, `status`) VALUES
+('Kalle123', 'kalle.karlsson@hotmail.com', 'qwe123', 1);
 
 --
 -- Index för dumpade tabeller
