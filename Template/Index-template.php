@@ -14,7 +14,7 @@
 		<title>Hem</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="Slutprojekt.css" rel="stylesheet">
+		<link rel="stylesheet" href="Slutprojekt.css">
 	</head>
 
 	<body>

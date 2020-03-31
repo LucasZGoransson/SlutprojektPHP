@@ -24,7 +24,7 @@
 
 
 		<main role="main">
-			<form action="InloggningRespons.php" method="post">
+			<form action="SkapaInlaggRespons.php" method="post">
 				<fieldset>
 					<legend>Skapa nytt inlägg:</legend><br>
 			

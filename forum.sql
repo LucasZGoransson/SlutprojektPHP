@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 17 mars 2020 kl 10:00
--- Serverversion: 10.4.6-MariaDB
--- PHP-version: 7.3.8
+-- Tid vid skapande: 31 mars 2020 kl 10:46
+-- Serverversion: 10.4.11-MariaDB
+-- PHP-version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,6 +34,13 @@ CREATE TABLE `inlagg` (
   `brodtext` varchar(1000) COLLATE utf8_swedish_ci NOT NULL,
   `inlaggID` int(255) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+
+--
+-- Dumpning av Data i tabell `inlagg`
+--
+
+INSERT INTO `inlagg` (`anvnamn`, `rubrik`, `brodtext`, `inlaggID`) VALUES
+('kalle123', 'test', 'testest', 1);
 
 -- --------------------------------------------------------
 
@@ -72,6 +79,16 @@ ALTER TABLE `inlagg`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`anvnamn`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT för dumpade tabeller
+--
+
+--
+-- AUTO_INCREMENT för tabell `inlagg`
+--
+ALTER TABLE `inlagg`
+  MODIFY `inlaggID` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
