@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 31 mars 2020 kl 10:46
+-- Tid vid skapande: 12 maj 2020 kl 10:47
 -- Serverversion: 10.4.11-MariaDB
 -- PHP-version: 7.4.3
 
@@ -32,15 +32,18 @@ CREATE TABLE `inlagg` (
   `anvnamn` varchar(50) COLLATE utf8_swedish_ci NOT NULL,
   `rubrik` varchar(50) COLLATE utf8_swedish_ci NOT NULL,
   `brodtext` varchar(1000) COLLATE utf8_swedish_ci NOT NULL,
-  `inlaggID` int(255) UNSIGNED NOT NULL
+  `inlaggID` int(255) UNSIGNED NOT NULL,
+  `datum` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 
 --
 -- Dumpning av Data i tabell `inlagg`
 --
 
-INSERT INTO `inlagg` (`anvnamn`, `rubrik`, `brodtext`, `inlaggID`) VALUES
-('kalle123', 'test', 'testest', 1);
+INSERT INTO `inlagg` (`anvnamn`, `rubrik`, `brodtext`, `inlaggID`, `datum`) VALUES
+('kalle123', 'test', 'testest', 1, '2020-05-11 09:52:42'),
+('kalle123', 'Test', 'Testest', 2, '2020-05-12 09:52:42'),
+('pelle123', 'Hej', '123', 3, '2020-05-12 09:53:00');
 
 -- --------------------------------------------------------
 
@@ -60,7 +63,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`anvnamn`, `email`, `password`, `status`) VALUES
-('Kalle123', 'kalle.karlsson@hotmail.com', 'qwe123', 1);
+('Kalle123', 'kalle.karlsson@hotmail.com', 'qwe123', 1),
+('pelle123', 'pelle.pettersson@hotmail.com', 'qwe123', 1);
 
 --
 -- Index för dumpade tabeller
@@ -88,7 +92,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT för tabell `inlagg`
 --
 ALTER TABLE `inlagg`
-  MODIFY `inlaggID` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `inlaggID` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
