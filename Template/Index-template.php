@@ -1,10 +1,12 @@
 <?php
 	$namn="";
+	$status="";
 	
 	session_start();
 	
 	if(isset($_SESSION['username'])){
 		$namn=$_SESSION['username'];
+		$status=$_SESSION['status'];
 	}
 
 	require "connect.php";
@@ -34,46 +36,28 @@
 
 		<main role="main">
 			<h1>Välkommen <?php echo $namn;?> till Forumet!</h1>
-			
-			<table>
-				<th>
-					
-				</th>
-				<td>
-					
-				</td>
-				<td>
-				
-				</td>
-				<?php
-						/*while($row = $result->fetch_assoc()) 
-						{
-							echo "<tr><td>"; 
-							echo $row['anvnamn']; 
-							echo "</td><td>";
-							echo $row['rubrik'];
-							echo "</td><td>";
-							echo $row['brodtext'];
-							echo "</td></tr>";
-						}*/
-				?>
-			</table>
+
 			<?php
 				while($row = $result->fetch_assoc())
 				{
-					echo "<article><h2>";
+					$aid=$row['inlaggID'];
+					echo "<article><div class='purple'><h2>";
 					echo $row['rubrik'];
-					echo "</h2><p>";
+					echo "</h2></div><div class='toright'><p>";
 					echo $row['brodtext'];
-					echo "<p><p><small>Skrivet av "; 
+					echo "<p></div>";
+					if ($status==2)
+					{
+						echo "<button type='button' class='small' onclick='DeletePost.php?aid=$aid';>Ta bort</button>";
+					}
+					echo "<div class='grey'><p><small class='pright'>Skrivet av "; 
 					echo $row['anvnamn'];
 					echo " ";
 					echo $row['datum'];
-					echo "</small></p></article>";
+					echo "</small></p></div></article>";
 				}
 			?>
 		</main>
-
 		
 		<div class="sidenav2">
 		</div>

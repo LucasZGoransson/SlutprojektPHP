@@ -81,7 +81,6 @@ nav.sidenav ul{
 }
 /*-----------------------------------------*/
 
-
 /*Table traits*/
 
 table {
@@ -93,8 +92,53 @@ th, td {
 	text-align: left;
 }
 
-/*-----------------------------------------*/
+/*-----------Post traits-----------*/
 
+article {
+	width: 97.94%;
+	background-color: #ECECEC;
+	border-radius: 12px;
+	margin: 1%;
+}
+
+.purple {
+	width: 100%;
+	background-color: purple;
+	border-radius: 8px 8px 0px 0px;
+}
+
+.grey {
+	width: 100%;
+	background-color: lightgrey;
+	border-radius: 0px 0px 8px 8px;
+}
+
+.toright {
+	padding: 0px 5px;
+}
+
+.pright {
+	margin-left: 5px;
+}
+
+.small {
+	height: 20px;
+	width: 60px;
+	border-radius: 5px;
+	margin-left: 5px;
+	padding: 0;
+}
+
+h2 {
+	color: white;
+	margin-left: 5px;
+}
+
+h1 {
+	margin-left: 15px;
+}
+
+/*-----------------------------------------*/
 
 footer {
 	height: 100px;
@@ -115,7 +159,6 @@ footer p{
 }
 
 /*-----------------------------------------*/
-
 
 main{
 	float: left;
